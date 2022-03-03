@@ -26,7 +26,7 @@ export class AppComponent {
   }
 
   showItem(item:IUser) {
-    this.courseService.getUser(item.id).subscribe((data:IUser) => {
+    this.courseService.getUserById(item.id).subscribe((data:IUser) => {
       this.user = data
     })
   }

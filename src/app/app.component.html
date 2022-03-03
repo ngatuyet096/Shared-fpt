@@ -28,17 +28,20 @@
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
 
-<div>
-  {{user.fullName}}
-</div>
-<div>
-  {{user.formatDob}}
-</div>
-<div>
-  {{user.createdAt}}
-</div>
-<div>
-  {{user.gender}}
+<div [hidden]="!user.id">
+  Show User
+  <div>
+    {{user.fullName}}
+  </div>
+  <div>
+    {{user.formatDob}}
+  </div>
+  <div>
+    {{user.createdAt}}
+  </div>
+  <div>
+    {{user.gender}}
+  </div>
 </div>
 
 <router-outlet></router-outlet>

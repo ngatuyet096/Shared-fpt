@@ -15,7 +15,7 @@ export class CourseService {
 		return this.ApiSv.get('/users', opts).pipe(map(res => res.map((item:IUser) =>  new User().deserialize(item))))
 	}
 
-	getUser(id:string, opts?: any): Observable<IUser> {
+	getUserById(id:string, opts?: any): Observable<IUser> {
 		return this.ApiSv.get(`/users/${id}`, opts).pipe(map(res =>  new User().deserialize(res)))
 	}
 
